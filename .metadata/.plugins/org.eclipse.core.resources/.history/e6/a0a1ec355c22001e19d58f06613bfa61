@@ -1,0 +1,40 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+public class CalculatorUsingArray {
+	public CalculatorUsingArray() {
+		
+	JFrame frame=new JFrame("calculator");
+	frame.setLayout(null);
+	frame.setSize(600,600);
+	frame.setLocation(400,50);
+	
+	JTextField field=new JTextField("hi");
+	field.setBounds(30, 30, 540, 50);
+	field.setBackground(Color.lightGray);
+	field.setOpaque(true);
+	field.setFont(new Font("Ariel",Font.PLAIN,40));
+	field.setHorizontalAlignment(SwingConstants.RIGHT);
+	field.setForeground(Color.black);
+	frame.add(field);
+	
+	JButton[] numberButtons=new JButton[10];
+	for(int i=1;i<=10;i++) {
+		numberButtons[i] = new JButton(String.valueOf(i));
+		numberButtons[i].setBounds(30+(100/i), 60+(100/i), 80, 80);
+		numberButtons[i].setFont(new Font("Ariel",Font.PLAIN,40));
+		frame.add(numberButtons[i]);
+	}
+	
+	frame.setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new CalculatorUsingArray();
+	}
+}

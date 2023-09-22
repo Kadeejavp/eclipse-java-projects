@@ -1,0 +1,146 @@
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+public class Calculator implements ActionListener {
+	
+	JLabel displayLabel;
+	JButton sevenButton;
+	JButton eightButton;
+	JButton nineButton;
+	JButton fourButton;
+	JButton fiveButton;
+	JButton sixButton;
+	JButton oneButton;
+	JButton twoButton;
+	JButton threeButton;
+	JButton dotButton;
+	JButton zeroButton;
+	JButton equalButton;
+	JButton plusButton;
+	JButton minusButton;
+	JButton intoButton;
+	JButton divisionButton;
+	
+	public Calculator() {
+		JFrame jf=new JFrame("Calculator");
+		jf.setLayout(null);
+		jf.setSize(600,600);
+		jf.setLocation(400,50);
+		
+		displayLabel=new JLabel("hello");
+		displayLabel.setBounds(30,30,540,40);
+		displayLabel.setFont(new Font("Arial", Font.PLAIN, 25));
+		displayLabel.setBackground(Color.gray);
+		displayLabel.setOpaque(true);
+		displayLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+		displayLabel.setForeground(Color.white);
+		jf.add(displayLabel);
+		
+		sevenButton=new JButton("7");
+		sevenButton.setFont(new Font("Arial",Font.PLAIN,40));
+		sevenButton.setBounds(30,120,80,80);
+		sevenButton.addActionListener(this);
+        jf.add(sevenButton);
+        
+        eightButton=new JButton("8");
+        eightButton.setFont(new Font("Arial",Font.PLAIN,40));
+		eightButton.setBounds(130,120,80,80);
+		eightButton.addActionListener(this);
+        jf.add(eightButton);
+        
+        nineButton=new JButton("9");
+        nineButton.setFont(new Font("Arial",Font.PLAIN,40));
+		nineButton.setBounds(230,120,80,80);
+        jf.add(nineButton);
+        
+        fourButton=new JButton("4");
+        fourButton.setFont(new Font("Arial",Font.PLAIN,40));
+		fourButton.setBounds(30,230,80,80);
+        jf.add(fourButton);
+        
+        fiveButton=new JButton("5");
+        fiveButton.setFont(new Font("Arial",Font.PLAIN,40));
+		fiveButton.setBounds(130,230,80,80);
+        jf.add(fiveButton);
+        
+        sixButton=new JButton("6");
+        sixButton.setFont(new Font("Arial",Font.PLAIN,40));
+		sixButton.setBounds(230,230,80,80);
+        jf.add(sixButton);
+        
+        oneButton=new JButton("1");
+        oneButton.setFont(new Font("Arial",Font.PLAIN,40));
+		oneButton.setBounds(30,340,80,80);
+        jf.add(oneButton);
+        
+        twoButton=new JButton("2");
+        twoButton.setFont(new Font("Arial",Font.PLAIN,40));
+		twoButton.setBounds(130,340,80,80);
+        jf.add(twoButton);
+        
+        threeButton=new JButton("3");
+        threeButton.setFont(new Font("Arial",Font.PLAIN,40));
+		threeButton.setBounds(230,340,80,80);
+        jf.add(threeButton);
+        
+        dotButton=new JButton(".");
+        dotButton.setFont(new Font("Arial",Font.PLAIN,40));
+        dotButton.setBounds(30,450,80,80);
+        jf.add(dotButton);
+        
+        zeroButton=new JButton("0");
+        zeroButton.setFont(new Font("Arial",Font.PLAIN,40));
+        zeroButton.setBounds(130,450,80,80);
+        jf.add(zeroButton);
+        
+        equalButton=new JButton("=");
+        equalButton.setFont(new Font("Arial",Font.PLAIN,40));
+        equalButton.setBounds(230,450,80,80);
+        jf.add(equalButton);
+        
+        plusButton=new JButton("+");
+        plusButton.setFont(new Font("Arial",Font.PLAIN,40));
+        plusButton.setBounds(340,450,80,80);
+        jf.add(plusButton);
+        
+        minusButton=new JButton("-");
+        minusButton.setFont(new Font("Arial",Font.PLAIN,40));
+        minusButton.setBounds(340,340,80,80);
+        jf.add(minusButton);
+        
+        intoButton=new JButton("x");
+        intoButton.setFont(new Font("Arial",Font.PLAIN,40));
+        intoButton.setBounds(340,230,80,80);
+        jf.add(intoButton);
+        
+        divisionButton=new JButton("/");
+        divisionButton.setFont(new Font("Arial",Font.PLAIN,40));
+        divisionButton.setBounds(340,120,80,80);
+        jf.add(divisionButton);
+        
+        
+        jf.setVisible(true);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	public static void main(String[] args) {
+		new Calculator();
+		
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==sevenButton) {
+			displayLabel.setText("7");
+		}else if(e.getSource()==eightButton) {
+			displayLabel.setText("8");
+		}
+		
+	}
+
+}
