@@ -1,12 +1,15 @@
 
 public class TextScanner {
-	Sample s=new Sample();
-void scan() {
+	
+	Sample obj;
+	public TextScanner(Sample obj) {
+		this.obj=obj;
 		
-		
+	}
+	void scan() {
 		
 		String Text="scanned text";
-		s.onText(Text);
+		obj.onText(Text);
 	}
 
 }

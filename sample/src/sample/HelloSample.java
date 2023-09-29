@@ -10,6 +10,7 @@ public class HelloSample {
 		
 		System.out.println("enter 2 numbers");
 		
+		
 		int a=s.nextInt();
 		int b=s.nextInt();
 		

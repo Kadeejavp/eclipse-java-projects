@@ -5,7 +5,7 @@ public class Sample {
 	}
 
 	Sample(){
-		TextScanner ts=new TextScanner();
+		TextScanner ts=new TextScanner(this);
 		ts.scan();
 	}
 	
